@@ -8,6 +8,7 @@ $(TARGET): $(TARGET).o
 	$(CC) $(CFLAGS) $^ -o $@
 	rm -f $(TARGET).o
 	./$(TARGET)
+	rm $(TARGET)
 
 $(TARGET).o: $(TARGET).c
 	$(CC) $(CFLAGS) -c $< -o $@
